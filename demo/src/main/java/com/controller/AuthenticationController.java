@@ -21,13 +21,6 @@ public class AuthenticationController {
 	{
 		loginService = new MailService();
 	}
-	@RequestMapping(value="/login",method=RequestMethod.GET,consumes="application/json",produces="application/json")
-	public String login(@RequestBody MailModel inputRequest) 
-	{
-		
-		
-		
-		return "";
-	}
+	
 
 }

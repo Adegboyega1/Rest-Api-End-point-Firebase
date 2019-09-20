@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+/home/gboyega/Documents/workspace3/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1924484980.index

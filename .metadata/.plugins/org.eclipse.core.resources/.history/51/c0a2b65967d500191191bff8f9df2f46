@@ -1,0 +1,27 @@
+package com.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.service.MailService;
+
+@Component
+@RestController
+public class AuthenticationController {
+	
+	
+	MailService loginService;
+	public AuthenticationController()
+	{
+		loginService = new MailService();
+	}
+	@RequestMapping(value="/login")
+	public String login(@RequestBody MailService requestBody,)
+	{
+		
+	}
+
+}

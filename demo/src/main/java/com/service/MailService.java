@@ -1,5 +1,6 @@
 package com.service;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.client.RestTemplate;
 
@@ -15,11 +16,12 @@ public class MailService
 	}
 	String url = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCArRe0FxKm4mk4fandJSNhJ3L8te8Ka1Y";
 	
-	public MailModel login(@RequestBody MailModel inputRequest ) 
+	public void login(@RequestBody MailModel inputRequest ) 
 	{
-		MailModel responseBody = restTemplate.postForObject
-				(url,inputRequest, MailModel.class);
-		  return responseBody;
+		
+		  
+		  ResponseEntity<MailModel> response = restTemplate.postForEntity(url,inputRequest, MailModel.class);
+		 System.out .println( response.getBody().toString());
 	}
 
 }
