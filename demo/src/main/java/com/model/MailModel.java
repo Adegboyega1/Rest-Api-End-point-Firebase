@@ -8,8 +8,29 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 public class MailModel {
 	
-	private String name="adebayogboyega@yahoo.com";
-	private String password="longman";
-	boolean token;
+
+		private String name;
+		private String password;
+		private boolean token;
+		public boolean isToken() {
+			return token;
+		}
+		public void setToken(boolean token) {
+			this.token = token;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
+		}
+		
+	
 
 }

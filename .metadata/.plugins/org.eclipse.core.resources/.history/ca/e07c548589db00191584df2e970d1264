@@ -1,0 +1,29 @@
+package com.service;
+
+
+
+
+import com.google.api.client.http.HttpHeaders;
+import com.model.MailModel;
+@Component
+public class MailService  
+{
+	
+	
+	
+	
+	public static void login(@RequestBody MailModel inputRequest ) 
+	{
+		
+
+		MailModel mail = new MailModel();
+		mail.setName("adebayogboyega@yahoo.com");
+		mail.setPassword("longman");
+		mail.setToken(true);
+		
+		
+	}
+
+	
+
+}

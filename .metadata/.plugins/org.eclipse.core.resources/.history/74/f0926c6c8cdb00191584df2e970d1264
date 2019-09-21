@@ -1,0 +1,39 @@
+package com.service;
+
+
+
+
+import org.springframework.stereotype.Component;
+
+import com.google.api.client.http.HttpHeaders;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.model.MailModel;
+@Component
+public class MailService  
+{
+	
+	
+	MailModel mail ;
+	String url = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=";
+		
+	
+	public void initLogin() 
+	{
+		
+
+		mail = new MailModel();
+		mail.setName("adebayogboyega@yahoo.com");
+		mail.setPassword("longman");
+		mail.setToken(true);	
+	}
+	
+	public void loginClient()
+	{
+		HttpResponse<JsonNode> response = Unirest.post()
+	}
+
+	
+
+}
